@@ -14,11 +14,11 @@ const MovieDetail = function () {
         functions,
     } = useContext(DataContext);
 
-    const { fetchMovieById } = functions;
+    const { fetchMovieByID } = functions;
 
     useEffect(() => {
         if (Value !== undefined) {
-            fetchMovieById(Value);
+            fetchMovieByID(Value);
         }
     }, []);
 

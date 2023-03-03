@@ -41,7 +41,7 @@ export const DataProvider = (props) => {
         );
     };
 
-    const fetchMovieById = async (idMovie) => {
+    const fetchMovieByID = async (idMovie) => {
         let res = await axios.get(`https://backendexample.sanbersy.com/api/data-movie/${idMovie}`);
           let data = res.data;
           setInputMovie({
@@ -60,13 +60,14 @@ export const DataProvider = (props) => {
 
     const functions = {
         fetchMovieData,
-        fetchMovieById,
+        fetchMovieByID,
     };
 
     return (
         <DataContext.Provider
             value={{
                 dataMovie,
+                inputMovie,
                 setDataMovie,
                 currentMovieId,
                 setCurrentMovieId,
